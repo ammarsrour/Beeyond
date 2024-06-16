@@ -4,8 +4,8 @@
     <title>About Us - Beeyond Tech</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/main.css') }}" />
+    <noscript><link rel="stylesheet" href="{{ url_for('static', filename='assets/css/noscript.css') }}" /></noscript>
 </head>
 <body class="is-preload">
     <div id="page-wrapper">
@@ -13,26 +13,26 @@
         <!-- Header -->
         <header id="header">
             <div id="logo">
-                <a href="index.html">
-                    <img src="images/logo/no background logo.png" alt="Beeyond Tech Logo" />
+                <a href="{{ url_for('index') }}">
+                    <img src="{{ url_for('static', filename='images/logo/no background logo.png') }}" alt="Beeyond Tech Logo" />
                     Beeyond Tech
                 </a>
             </div>
             <nav id="nav">
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="{{ url_for('index') }}">Home</a></li>
+                    <li><a href="{{ url_for('static', filename='about.html') }}">About Us</a></li>
                     <li>
                         <a href="#">Services</a>
                         <ul>
-                            <li><a href="core-banking.html">Core Banking Consultation</a></li>
-                            <li><a href="bpm-workflows.html">BPM and Workflows</a></li>
-                            <li><a href="balador-queuing.html">Balador Queuing System</a></li>
-                            <li><a href="school-management.html">School Management Systems</a></li>
+                            <li><a href="{{ url_for('static', filename='core-banking.html') }}">Core Banking Consultation</a></li>
+                            <li><a href="{{ url_for('static', filename='bpm-workflows.html') }}">BPM and Workflows</a></li>
+                            <li><a href="{{ url_for('static', filename='balador-queuing.html') }}">Balador Queuing System</a></li>
+                            <li><a href="{{ url_for('static', filename='school-management.html') }}">School Management Systems</a></li>
                         </ul>
                     </li>
-                    <li><a href="resources.html">Resources</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="{{ url_for('static', filename='resources.html') }}">Resources</a></li>
+                    <li><a href="{{ url_for('static', filename='contact.html') }}">Contact Us</a></li>
                 </ul>
             </nav>
         </header>
@@ -47,7 +47,7 @@
 
                 <!-- Content -->
                 <section id="content">
-                    <a href="#" class="image fit"><img src="images/pic07.jpg" alt="" /></a>
+                    <a href="#" class="image fit"><img src="{{ url_for('static', filename='images/pic07.jpg') }}" alt="" /></a>
                     <h3>Our Story</h3>
                     <p>Beeyond Tech was founded in 2010 by a team of passionate technology enthusiasts who shared a vision of transforming businesses through innovative software solutions. With a combined experience of over 50 years in the industry, our founders set out to create a company that would deliver cutting-edge technology to clients across various sectors.</p>
                     <p>Over the years, we have grown into a leading provider of technology solutions, serving clients globally. Our team has expanded to include highly skilled developers, consultants, and support staff who are dedicated to helping businesses achieve their goals through technology.</p>
@@ -79,13 +79,10 @@
     </div>
 
     <!-- Scripts -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/jquery.scrolly.min.js"></script>
-    <script src="assets/js/jquery.dropotron.min.js"></script>
-    <script src="assets/js/jquery.scrollex.min.js"></script>
-    <script src="assets/js/browser.min.js"></script>
-    <script src="assets/js/breakpoints.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
-</body>
-</html>
+    <script src="{{ url_for('static', filename='assets/js/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/jquery.scrolly.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/jquery.dropotron.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/jquery.scrollex.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/browser.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/breakpoints.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/

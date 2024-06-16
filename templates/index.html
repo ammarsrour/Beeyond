@@ -4,8 +4,8 @@
     <title>Beeyond Tech</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/main.css') }}" />
+    <noscript><link rel="stylesheet" href="{{ url_for('static', filename='assets/css/noscript.css') }}" /></noscript>
 </head>
 <body class="is-preload landing">
     <div id="page-wrapper">
@@ -13,26 +13,26 @@
         <!-- Header -->
         <header id="header">
             <div id="logo">
-                <a href="index.html">
-                    <img src="images/logo/no background logo.png" alt="Beeyond Tech Logo" />
+                <a href="{{ url_for('index') }}">
+                    <img src="{{ url_for('static', filename='images/logo/no background logo.png') }}" alt="Beeyond Tech Logo" />
                     Beeyond Tech
                 </a>
             </div>
             <nav id="nav">
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="{{ url_for('index') }}">Home</a></li>
+                    <li><a href="{{ url_for('static', filename='about.html') }}">About Us</a></li>
                     <li>
                         <a href="#">Services</a>
                         <ul>
-                            <li><a href="core-banking.html">Core Banking Consultation</a></li>
-                            <li><a href="bpm-workflows.html">BPM and Workflows</a></li>
-                            <li><a href="balador-queuing.html">Balador Queuing System</a></li>
-                            <li><a href="school-management.html">School Management Systems</a></li>
+                            <li><a href="{{ url_for('static', filename='core-banking.html') }}">Core Banking Consultation</a></li>
+                            <li><a href="{{ url_for('static', filename='bpm-workflows.html') }}">BPM and Workflows</a></li>
+                            <li><a href="{{ url_for('static', filename='balador-queuing.html') }}">Balador Queuing System</a></li>
+                            <li><a href="{{ url_for('static', filename='school-management.html') }}">School Management Systems</a></li>
                         </ul>
                     </li>
-                    <li><a href="resources.html">Resources</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="{{ url_for('static', filename='resources.html') }}">Resources</a></li>
+                    <li><a href="{{ url_for('static', filename='contact.html') }}">Contact Us</a></li>
                 </ul>
             </nav>
         </header>
@@ -44,14 +44,14 @@
                     <h2>Beeyond Tech</h2>
                     <p>Empowering businesses with cutting-edge technology solutions</p>
                 </header>
-                <span class="image"><img src="images/logo/beeyond_tech_logo.png"  alt="" /></span>
+                <span class="image"><img src="{{ url_for('static', filename='images/logo/beeyond_tech_logo.png') }}"  alt="" /></span>
             </div>
             <a href="#one" class="goto-next scrolly">Next</a>
         </section>
 
         <!-- One -->
         <section id="one" class="spotlight style1 bottom">
-            <span class="image fit main"><img src="images/pic02.jpg" alt="" /></span>
+            <span class="image fit main"><img src="{{ url_for('static', filename='images/pic02.jpg') }}" alt="" /></span>
             <div class="content">
                 <div class="container">
                     <div class="row">
@@ -66,7 +66,7 @@
                         </div>
                         <div class="col-4 col-12-medium">
                             <ul class="actions">
-                                <li><a href="core-banking.html" class="button">Learn More</a></li>
+                                <li><a href="{{ url_for('static', filename='core-banking.html') }}" class="button">Learn More</a></li>
                             </ul>
                         </div>
                     </div>
@@ -77,7 +77,7 @@
 
         <!-- Two -->
         <section id="two" class="spotlight style2 right">
-            <span class="image fit main"><img src="images/pic03.jpg" alt="" /></span>
+            <span class="image fit main"><img src="{{ url_for('static', filename='images/pic03.jpg') }}" alt="" /></span>
             <div class="content">
                 <header>
                     <h2>BPM and Workflows</h2>
@@ -85,7 +85,7 @@
                 </header>
                 <p>Our BPM solutions and workflow optimization services will help you eliminate bottlenecks, reduce costs, and improve overall productivity.</p>
                 <ul class="actions">
-                    <li><a href="bpm-workflows.html" class="button">Learn More</a></li>
+                    <li><a href="{{ url_for('static', filename='bpm-workflows.html') }}" class="button">Learn More</a></li>
                 </ul>
             </div>
             <a href="#three" class="goto-next scrolly">Next</a>
@@ -93,7 +93,7 @@
 
         <!-- Three -->
         <section id="three" class="spotlight style3 left">
-            <span class="image fit main bottom"><img src="images/pic04.jpg" alt="" /></span>
+            <span class="image fit main bottom"><img src="{{ url_for('static', filename='images/pic04.jpg') }}" alt="" /></span>
             <div class="content">
                 <header>
                     <h2>Balador Queuing System</h2>
@@ -101,7 +101,7 @@
                 </header>
                 <p>Balador is a powerful queuing system designed to optimize customer flow, reduce waiting times, and improve service quality across various industries.</p>
                 <ul class="actions">
-                    <li><a href="balador-queuing.html" class="button">Learn More</a></li>
+                    <li><a href="{{ url_for('static', filename='balador-queuing.html') }}" class="button">Learn More</a></li>
                 </ul>
             </div>
             <a href="#four" class="goto-next scrolly">Next</a>
@@ -168,14 +168,14 @@
     </div>
 
     <!-- Scripts -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/jquery.scrolly.min.js"></script>
-    <script src="assets/js/jquery.dropotron.min.js"></script>
-    <script src="assets/js/jquery.scrollex.min.js"></script>
-    <script src="assets/js/browser.min.js"></script>
-    <script src="assets/js/breakpoints.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script src="{{ url_for('static', filename='assets/js/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/jquery.scrolly.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/jquery.dropotron.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/jquery.scrollex.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/browser.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/breakpoints.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/util.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/main.js') }}"></script>
 
 </body>
 </html>
