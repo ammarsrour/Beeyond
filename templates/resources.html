@@ -4,8 +4,8 @@
     <title>Resources - Beeyond Tech</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/main.css') }}" />
+    <noscript><link rel="stylesheet" href="{{ url_for('static', filename='assets/css/noscript.css') }}" /></noscript>
 </head>
 <body class="is-preload">
     <div id="page-wrapper">
@@ -13,8 +13,8 @@
         <!-- Header -->
         <header id="header">
             <div id="logo">
-                <a href="index.html">
-                    <img src="images/logo/no background logo.png" alt="Beeyond Tech Logo" />
+                <a href="{{ url_for('index') }}">
+                    <img src="{{ url_for('static', filename='images/logo/no background logo.png') }}" alt="Beeyond Tech Logo" />
                     Beeyond Tech
                 </a>
             </div>
@@ -28,7 +28,7 @@
                             <li><a href="{{ url_for('core_banking') }}">Core Banking Consultation</a></li>
                             <li><a href="{{ url_for('bpm_workflows') }}">BPM and Workflows</a></li>
                             <li><a href="{{ url_for('balador_queuing') }}">Balador Queuing System</a></li>
-                            <li><a href="{{ url_for('static', filename='school-management.html') }}">School Management Systems</a></li>
+                            <li><a href="#">School Management Systems</a></li>
                         </ul>
                     </li>
                     <li><a href="{{ url_for('resources') }}">Resources</a></li>
@@ -89,8 +89,13 @@
     </div>
 
     <!-- Scripts -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/jquery.scrolly.min.js"></script>
-    <script src="assets/js/jquery.dropotron.min.js"></script>
-    <script src="assets/js/jquery.scrollex.min.js"></script>
-    <script src="assets/js/browser.min.js"></script>
+    <script src="{{ url_for('static', filename='assets/js/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/jquery.scrolly.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/jquery.dropotron.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/jquery.scrollex.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/browser.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/breakpoints.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/util.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/main.js') }}"></script>
+</body>
+</html>
